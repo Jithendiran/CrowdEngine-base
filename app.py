@@ -60,7 +60,9 @@ def write_db():
 
     return render_template('movies.html',p="ok" ,name=movie)
 
-
+@app.route('/download/')
+def download():
+    return data.get_csv(a = app)
 
 if __name__ == "__main__":
     app.run()
